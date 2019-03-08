@@ -14,6 +14,8 @@ public class Captor {
      */
     private String name;
 
+    private PowerSource powerSource;
+
     @Deprecated
     public Captor() {
         // Use for serializer or deserializer

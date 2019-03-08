@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.training.springcore.BigCorpApplicationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-03-08T09:27:19" hostname="DESKTOP-8LT956O" time="0.019">
+  <properties/>
+  <testcase name="run" classname="com.training.springcore.BigCorpApplicationTest" time="0.019"/>
+  <system-out><![CDATA[Application startup
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

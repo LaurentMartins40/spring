@@ -1,17 +1,26 @@
 package com.training.springcore.service;
 
 import com.training.springcore.model.Site;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class SiteServiceImpl implements SiteService {
+    @Autowired
+    private CaptorService captorService;
 
-    private CaptorService captorService = new CaptorServiceImpl();
-
+    public SiteServiceImpl() {
+    }
+    public SiteServiceImpl(CaptorService captorService) {
+        System.out.println("Init SiteServiceImpl :" + this);
+        this.captorService = captorService;
+    }
     @Override
     public Site findById(String siteId) {
+        System.out.println("Appel de findById :" + this);
         if (siteId == null) {
             return null;
         }
-
         Site site = new Site("Florange");
         site.setId(siteId);
         site.setCaptors(captorService.findBySite(siteId));
