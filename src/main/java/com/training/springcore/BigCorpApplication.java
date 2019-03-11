@@ -1,4 +1,5 @@
 package com.training.springcore;
+import com.training.springcore.config.MonitoredAspect;
 import com.training.springcore.model.ApplicationInfo;
 import com.training.springcore.service.SiteService;
 import org.springframework.context.ApplicationContext;
@@ -20,6 +21,7 @@ public class BigCorpApplication {
                     + applicationInfo.getVersion());
             System.out.println("plus d'informations sur " + applicationInfo.getWebSiteUrl());
             System.out.println("==========================================================");
-
+            SiteService site = context.getBean(SiteService.class);
+            site.findById("siteA");
     }
 }
