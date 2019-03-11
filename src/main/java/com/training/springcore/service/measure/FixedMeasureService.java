@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 @Service("fixedMeasureService")
 public class FixedMeasureService implements MeasureService {
-    @Value("${bigcorp.measure.default-simulated}")
+    @Value("${bigcorp.measure.default-fixed}")
     private Integer defaultValue;
     @Override
     public List<Measure> readMeasures(Captor captor, Instant start, Instant end, MeasureStep step) {

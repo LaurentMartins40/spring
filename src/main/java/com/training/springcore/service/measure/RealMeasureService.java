@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 @Service("realMeasureService")
 public class RealMeasureService implements MeasureService {
-    @Value("${bigcorp.measure.default-simulated}")
+    @Value("${bigcorp.measure.default-real}")
     private Integer defaultValue;
     @Override
     public List<Measure> readMeasures(Captor captor, Instant start, Instant end, MeasureStep step) {

@@ -1,20 +1,25 @@
 package com.training.springcore.model;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.core.env.Environment;
 
 import java.util.Set;
 
 public class ApplicationInfo {
 
-    @Value("${bigcorp.name}")
     private String name;
-    @Value("${bigcorp.version}")
-    private Integer version;
-    @Value("${bigcorp.emails}")
+    private Integer version ;
     private Set<String> emails;
-    @Value("${bigcorp.webSiteUrl}")
-    private String webSiteUrl;
+    private String webSiteUrl ;
+
+    public ApplicationInfo(String name, Integer version, Set<String> emails, String webSiteUrl) {
+        this.name = name;
+        this.version = version;
+        this.emails = emails;
+        this.webSiteUrl = webSiteUrl;
+    }
 
     public String getName() {
         return name;
