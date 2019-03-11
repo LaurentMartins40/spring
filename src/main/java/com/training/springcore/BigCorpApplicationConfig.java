@@ -13,6 +13,7 @@ import java.util.Set;
 @ComponentScan
 @Configuration
 @PropertySource("classpath:application.properties")
+@EnableAspectJAutoProxy
 public class BigCorpApplicationConfig {
         @Autowired
         Environment environment;
